@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JavaScript : HTML DOM 網頁畫面操作</title>
+        <style>
+            .text{
+                background-color: aqua;
+            }
+        </style>
+    </head>
+    <body>
+        <h3>HTML DOM 畫面操作</h3>
+        <div id="content">練習網頁畫面的操作</div>
+        <button onclick="swap();">click me !</button>
+        <button onclick="recover()">recover !</button>
+        <script>
+            function swap(){
+                // 取得標籤物件
+                let carry=document.querySelector("#content");
+                // 操作標籤物件
+                //carry.innerHTML= "div new content";
+                carry.innerHTML="div new content";
+                carry.className= "text";
+                carry.style.fontSize="100px";
+            }
+            function recover(){
+                //let carry=document.querySelector("#content");
+                document.querySelector("#content").innerHTML="練習網頁畫面的操作";
+                document.querySelector("#content").className="";
+                document.querySelector("#content").style.fontSize="";
+            }
+            console.log(document.querySelector("#content"));
+
+
+            // let asd=document.getElementById("content");
+            // console.log(asd);
+        </script>
+        
+    </body>
+</html>

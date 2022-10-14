@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>css practice</title>
+    </head>
+    <body>
+        <!-- CSS -->
+            <div style="color:red; font-size:20px; "> <!-- CSS透過style屬性改變容器中字體的顏色及大小 -->
+                <h1 style="color:blue;">CSS practice</h1> <!-- 內外層屬性若有重複 內層屬性會覆蓋外層屬性 -->
+                <p  style="background-color:aqua;  border:5px solid green; width:200px; height:200px;">this is a paragraph</p>
+                <!-- border(邊框)要給3個值: 1.大小 2.樣式 ex:solid(實線)dashed(虛線) 3.顏色 -->
+                <!--max-width & max-height屬性來控制最大值為何-->
+            </div>
+        <!-- padding & margin --> 
+        <!-- padding控制"內部"空間 & margin控制"外部"空間 -->
+            <div style="padding:20px; margin:20px; background-color:gold; border: 2px dashed darkgreen;">
+            <!--上述可透過padding-top/bottom/left/right & margin-top/bottom/left/right屬性"僅"控制單一邊的數值-->
+                padding & margin 1
+            </div>
+            <!--可透過padding & margin屬性後方加上四個值: 順時鐘 上右下左定義-->
+                <div style="padding:20px 30px 40px 50px; background-color:blueviolet; border:1px dashed black;">
+                    padding & margin 2
+                </div>
+            <!--margin 可以寫負值-->
+                <div style="background-color:aquamarine; border:1px solid black; margin-top:-50px;">
+                    margin-top 負值實驗
+                </div>
+            <br/>
+            <br/>
+            <hr/>
+            <br/>
+            <br/>
+        <!-- float & display -->
+            <!-- float -->
+                <!--float可給予兩種值 left or right -->
+                <img src="YU.jpg" height="90" style="float:left;"/>
+                <p>This is a paragraph This is a paragraph This is a paragraph This is a paragraph This is a paragraph 
+                    This is a paragraph This is a paragraph This is a paragraph This is a paragraph This is a paragraph 
+                    This is a paragraph This is a paragraph This is a paragraph This is a paragraph This is a paragraph 
+                    This is a paragraph This is a paragraph This is a paragraph This is a paragraph This is a paragraph 
+                    This is a paragraph This is a paragraph This is a paragraph This is a paragraph This is a paragraph 
+                    This is a paragraph This is a paragraph This is a paragraph This is a paragraph This is a paragraph 
+                    This is a paragraph This is a paragraph This is a paragraph This is a paragraph This is a paragraph 
+                </p>
+            <!-- display -->
+                <!-- display可更改預設顯示方式block or inline -->
+                <p style="display:inline;">paragraph 1 display:inline</p>
+                <p style="display:inline;">paragraph 2 display:inline</p>
+                <span>span 1</span>
+                <span>span 2</span>
+                <span style="display:block;">span 3 display:block</span>
+        <a href="position.html">position定位 practice</a>
+    </body>
+</html>

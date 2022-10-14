@@ -1,0 +1,56 @@
+.headline{
+    font-size:40px;
+    font-weight:bold;
+    text-align: center;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+.desktop-menu{
+    display:block;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.mobile-menu{
+    display:none;
+    text-align:center;
+}
+.list{
+    display:flex;
+    justify-content: center;
+}
+.product{
+    flex:none;
+    width:380px;
+    margin:10px;
+    background-color: aqua;
+}
+.list>*{
+    border:1px solid black;
+}
+
+@media(max-width:1250px){
+    /* 螢幕寬度小於1250px, 套用這個區塊的css */
+    /* 平板裝置 */
+    .list{
+        flex-wrap: wrap;
+    }
+    .product{
+        width:45%;
+    }
+}
+@media(max-width:500px){
+    /* 螢幕寬度小於500px, 套用這個區塊的css */
+    /* 手機裝置360px~500px */
+    .headline{
+        font-size:22px;
+    }
+    .desktop-menu{
+        display:none;
+    }
+    .mobile-menu{
+        display:block;
+    }
+    .product{
+        width:90%;
+    }
+}

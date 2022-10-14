@@ -1,0 +1,75 @@
+.basic{
+    display: flex;
+    padding: 30px;
+    width: 820px;
+    height: 1160px;
+    background-color: lightgrey;
+    
+}
+
+.bigleft{
+    background-color: white;
+    flex: none;
+    width: 350px;
+    padding: 30px;
+    margin-top: -30px;
+    margin-bottom: -30px;
+    margin-left: -30px;
+}
+
+.bigright{
+    background-color: lightgrey;
+    border-top:1px solid black;
+    border-right: 1px solid black;
+    border-bottom: 1px solid black;
+    flex: none;
+    width: 350px;
+    padding: 30px;
+}
+
+.item{
+    
+    margin-top: 70px;
+    
+    
+}
+
+.photo{
+    text-align: center;
+}
+
+.name{
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+
+.bullshit{
+    margin-top: 150px;
+    font-size: 22px;
+    text-align: flex-start;
+}
+
+.bottom{
+    margin-top: 150px;
+    font-size: 20px;
+    padding-left: 20px;
+    border-left: 2px solid black;
+}
+
+.catagory{
+    font-size: 25px;
+    font-weight: bold;
+}
+.position{
+    margin-top:30px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.company{
+    margin-top:15px;
+    margin-bottom:15px;
+}
+div ul{
+    padding-left: 20px;
+}

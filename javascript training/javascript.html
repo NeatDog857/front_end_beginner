@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JavaScript Start</title>
+    </head>
+    <body>
+        <!-- 用 <script> 標籤就可以將 javascript 程式碼夾進 html 中-->
+            <script>
+                // 在 console 中印出資料 : console.log(資料);
+                    console.log("Hello JavaScript"); //在網頁開發人員工具的 console 中印出 Hello JavaScript
+                // 宣告變數語法 : let 變數名稱;
+                    let x;
+                    console.log(x); // 變數未給予值之前會印出 undefined 也就是"未定義" "空值"
+                    x=5;
+                    console.log(x);
+                    x="hello";
+                    console.log(x);
+                // 宣告常數(constant)語法 : const 常數名稱 = 資料; (!!常數的資料不能夠更動!!)
+                    const y=3;
+                    // y=100; // 因為 y 是常數變數所以裡面的資料被更動時會判定為錯誤的程式
+
+                // 要求使用者輸入 : prompt(字串,字串);
+                    
+                    function prompt_basicgrammar(){
+                        let no1= prompt("Plz enter a number","hi");
+                        let no2= prompt("plz enter second number","yo");
+                        let result= no1*no2;
+                        console.log(result);
+                        return result;
+                    }
+                    
+                // if 判斷式基本語法
+                    
+                    function if_basicgrammar(result){
+                        if(result==0){
+                            console.log("=0");
+                        }
+                        else if(result<=200){
+                            console.log("<=200");
+                        }
+                        else{
+                            console.log(">200");
+                        }
+                    }
+                    
+                // while 迴圈基本語法
+                    let test=0
+                    while(test<10){
+                        console.log(test);
+                        test++;
+                    }
+                // for 迴圈基本語法 : for(初始化程式;布林值;每次轉圈時執行){}
+                    for(let test=0; test<10; test++){
+                        console.log(test);
+                    }
+                /* 建立 function 語法: 第一種寫法 function 函式名稱(參數名稱列表){內部程式區塊}
+                                      第二種寫法 let 函式名稱=function(參數名稱列表){內部程式區塊}
+                */
+                // 呼叫 function 語法: 函式名稱(參數資料列表)
+                    //if_basicgrammar(prompt_basicgrammar());
+
+                // Object 物件 (用來封裝其他資料的容器)
+                    // 建立空白物件
+                        // 語法為: new Object()，可放進變數中做後續操作
+                        let obj=new Object();
+                    // 建立物件的成員 (封裝在物件底下的資料稱為成員)
+                        // 語法為: 物件.成員名稱=資料
+                        obj.x=3; // 把資料3 放進物件obj底下的成員x之中
+                        obj.y=4; // 非函式的成員，又稱為屬性(property)
+                        obj.example_function=function(){
+                            console.log("function in obj test!");
+                        } // 是函式的成員，又稱為方法(method)
+
+                    // 利用 JSON 物件表示法來簡化建立物件及其成員的寫法: {成員名稱:資料, 成員名稱:資料, ...}
+                        let obj1={}; // 等同於 let obj1= new Object();
+                        let obj2={
+                            x:3,
+                            y:4,
+                            example_function:function(){
+                                console.log("function in obj2 test!");
+                                // 在物件的方法中，使用 this ，代表物件本身
+                                console.log("x is :", this.x , "y is :", this.y);
+                            }
+                        }
+
+                // Array 陣列物件
+                    // 利用 new Array() 或 [] 來建立空白陣列物件
+                    // [資料,資料,...] 直接將資料放進陣列中
+                    // 陣列名稱.push(資料) 可將資料依序送進陣列中
+                        let array=[10,23,34];
+                        console.log(array);
+                        array.push(69);
+                        array.push(87);
+                        console.log(array);
+                        console.log(array.length);
+
+                        let sum=0;
+                        for(x=0;x<array.length;x++){
+                            console.log(array[x]);
+                            sum=sum+array[x];
+                        }
+                        console.log(sum/array.length);
+            </script>
+    </body>
+</html>

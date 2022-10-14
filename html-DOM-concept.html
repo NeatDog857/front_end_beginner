@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JavaScript : HTML DOM 核心觀念</title>
+    </head>
+    <body>
+        <div id="asd">asd</div>
+        <script>
+            // 認識內建的 window 物件 (HTML DOM 結構的最上層)
+                console.log(window);
+            // 取得視窗的寬度和高度
+                console.log(window.innerHeight, window.innerWidth);
+            // 透過 screen 物件, 取得螢幕尺寸
+                console.log(window.screen.height, window.screen.width);
+            // 取得網址列的內容
+                console.log(window.location.href);
+            // 更改網址列的內容 (跳轉網頁)
+                //window.location.href="https://www.google.com/"
+
+            // 認識 document 物件
+                console.log(window.document);
+                console.dir(window.document); // console.dir 可以取得非直覺式，更加程式化的呈現方式
+            // 取得網頁標題
+                console.log(window.document.title);
+            // 更改網頁標題
+                window.document.title = "new title !";
+            // 取得 body 標籤
+                console.log(window.document.body);
+            // 取得 body 標籤的內文
+                console.log(window.document.body.innerHTML);
+            // 更改網頁主畫面的內容 (body標籤的內文)
+                //window.document.body.innerHTML= "知其然,知其所以然";
+                
+        </script>
+    </body>
+</html>

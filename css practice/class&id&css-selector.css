@@ -1,0 +1,64 @@
+/*更多資訊可去w3school css selector (選擇器)*/
+
+
+
+/* 以下是套用class的語法 */
+    .fruit{
+        color: red;
+    }
+    .person{
+        color: blue;
+    }
+    .background-grey{
+        background-color: grey;
+    }
+/* 以下是套用id的語法 */
+    #css-h1{
+        color: yellow;
+        background-color: brown;
+    }
+
+/* 也可以混搭 
+
+    ex:
+
+    .fruit, #css-h1, h1{
+        賦予屬性;
+    }
+*/
+
+/* 套用至全部標籤的寫法
+
+    ex:
+
+    *{
+        賦予屬性;
+    }
+*/
+
+/* 套用至列表裡 (找所有的ul標籤後再往裡頭找有沒有li  接著在ul裡的li套用賦予的屬性)
+
+    ex:
+
+    ul li{
+        賦予屬性;
+    }
+*/
+
+/* 套用至屬性的寫法 (中括號中放屬性名稱)
+
+    ex:
+
+    [屬性名稱]{
+        賦予屬性;
+    }
+*/
+
+/* 滑鼠滑過指定的標籤or屬性 才會觸發套用賦予的屬性
+
+    ex:
+
+    標籤or[屬性名稱]or class or id:hover{
+        賦予屬性;
+    }
+*/

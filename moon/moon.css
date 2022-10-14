@@ -1,0 +1,86 @@
+.background{
+    width: 300px;
+    height:100px;
+    border:1px solid grey;
+    border-radius: 55px;
+    position:absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin:auto;
+    padding: 5px;
+    cursor: pointer;
+}
+.big{
+    width: 450px;
+    height: 450px;
+    border: 1px dashed black;
+    border-radius: 225px;
+    position:absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin:auto;
+    animation: roll 5s linear infinite;
+}
+.moon{
+    width: 100px;
+    height: 100px;
+    background-color: #ffe179;
+    border-radius: 50px;
+    position:absolute;
+    top: 5px;
+    left: 5px;
+    transition: all 0.6s linear;
+}
+.dot{
+    background-color: black;
+    position:absolute;
+}
+#moonroll{
+    animation: roll 2s linear infinite;
+}
+#dot1{
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    opacity: 0.2;
+    top: 20px;
+    left: 20px;
+}
+#dot2{
+    width: 10px;
+    height: 10px;
+    border-radius: 5px;
+    opacity: 0.3;
+    top: 40px;
+    left: 40px;
+}
+#dot3{
+    width: 6px;
+    height: 6px;
+    border-radius: 3px;
+    opacity: 0.4;
+    top: 48px;
+    left: 22px;
+}
+.background:hover .moon{
+    background-color: #245363;
+    left: 205px;
+    transform: rotate(180deg);
+    /* transition: all 0.6s linear; */ /*放在這的話變成 只有hover的時候有動畫*/
+}
+h1{
+    position:absolute;
+    top: -60px;
+    left: 115px;    
+}
+@keyframes roll {
+    from{
+        transform: rotate(0deg);        
+    }to{
+        transform: rotate(360deg);
+    }
+}

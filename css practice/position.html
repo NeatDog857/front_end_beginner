@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>position定位</title>
+    </head>
+    <body style="height:1500px;"> <!--定義body標籤1500像素的高度-->
+        <h1>position定位</h1>
+        <!-- position -->
+            <!-- position: fixed (固定定位) ; 預設固定在fixed之前的位置 -->
+            <!-- 被固定定位的標籤 概念同於float 會浮在特定的一層 -->
+            <!-- 也可後續追加 top/right/left/bottom : X px ; 來修改定位的位置-->
+            <!-- 也可組合使用 top: X px; right: Y px; 右上的意思 -->
+                <div style="width:80px; height:80px; background-color:gold; position:fixed; top:0px; left: 30px;"></div>
+                <div style="width:120px; height:120px; background-color:red;"></div>
+            <!-- position: relative (相對定位) ; -->
+            <!-- 相對定位會相對於本來應該要顯示的位置做偏移 -->
+                <div style="width:120px; height:120px; background-color: black; position:relative; top:30px;"></div>
+                <br/>
+                <br/>
+                <br/>
+            <!-- position: absolute (絕對定位) ; -->
+            <!-- 絕對定位會以最近外層的定位屬性為參考點去定位 若外層皆無定位屬性 則以網頁為參考點 -->
+                <div style="border: 5px solid blue; padding: 30px;">
+                    <div style="border: 5px solid blue; padding: 30px; position:relative;">
+                        <div style="width:20px; height:20px; background-color:green; position:absolute; top:5px;"></div>
+                    </div>
+                </div>
+
+
+
+
+
+
+        <a href="index.html">index</a>
+    </body>
+</html>

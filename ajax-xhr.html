@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>JavaScript : AJAX 網路連線實務</title>
+    </head>
+    <body>
+        <h1>AJAX / XHR 網路連線實務</h1>
+        <button onclick="getData();">連線取得資料</button>
+        <div id="result"></div>
+        <script>
+            /* 測試用連線網址: 
+            https://cwpeng.github.io/live-records-samples/data/products.json */
+                function getData(){
+                    /* 利用 fetch 進行連線並取得資料 */
+                    fetch("https://cwpeng.github.io/live-records-samples/data/products.json").then(function(response){
+                        return response.json();
+                    }).then(function(data){
+                        // 已經取得資料, 把資料呈現到畫面上
+                        console.log(data); // data 是個陣列
+                        let result= document.querySelector("#result");
+                        for(i=0;i<data.length;i++){ // 用 for 迴圈把 data 陣列中的資料一一取出
+                            let product=data[i];
+                            // 由於 data 陣列中的資料都各為物件, 所以要再把成員給一一取出
+                            result.innerHTML+="<div>"+ product.name+","+ product.price+","+ product.description+ "</div>";
+                        }
+                    });
+                }
+        </script>
+    </body>
+</html>

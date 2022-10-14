@@ -1,0 +1,49 @@
+/* 設定flex要設定在外層*/
+    .container{
+        display:flex; /* flex 預設方式是 先由左到右 後由上而下 橫向排版 */
+        flex-wrap: nowrap; /* 版面寬度不夠時自動換行 不會擠壓container div中原本設定的width寬度200px */
+        /* flex-direction(主軸) 不寫的話預設為row 也就是先由左到右 後由上而下 */
+            flex-direction: column; /* 改為column則變為 先由上到下 後由左到右 */
+        height: 1000px;
+        border: 1px solid black;
+        justify-content: space-around; /* justify-content 依照主軸去配置空間 */
+        /*align-items: ; */  /* 次軸的控制 */
+                             /* The align-items property specifies the default alignment for items inside the flexible container. */
+                             /* The align-content property modifies the behavior of the flex-wrap property. 
+                             It is similar to align-items, but instead of aligning flex items, it aligns flex lines.
+                             Note: There must be multiple lines of items for this property to have any effect! */
+    } 
+
+
+
+
+.container div{
+    border:1px solid black;
+    width: 200px;
+    padding: 10px;
+    height:20px;
+}
+
+
+
+
+
+
+/* flex: x = 排版flex-direction(主軸)中flex總數裡的x份 */
+    /* box-1 中 flex:2 = 版面的2/(2+1+1) */
+/* order: x = x由小到大依照flex-direction(主軸)及其順序去排序*/
+
+/* .box-1{
+    flex:2; 
+    order: 3;
+}
+
+.box-2{
+    flex:1; 
+    order: 1;
+}
+
+.box-3{
+    flex:1; 
+    order: 2;
+}  */

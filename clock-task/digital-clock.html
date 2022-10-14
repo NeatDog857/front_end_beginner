@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>This is a custom Digital Clock</title>
+        <link rel="stylesheet" type="text/css" href="digital-clock.css"/>
+    </head>
+    <body>
+        <div class="container0">
+            <div id="tik" class="tiktoktext">Tik</div>
+            <div class="clock text1">
+                <span id="H"></span>
+                <span>:</span>
+                <span id="M"></span>
+                <span>:</span>
+                <span id="colorchange"></span>
+                <span id="AMPM"></span>
+            </div>
+            <div id="tok" class="tiktoktext">Tok</div>
+        </div>
+        
+        <script>
+            /*setInterval(clock,1000);
+            function clock(){
+                const i = new Date();
+                document.querySelector("#tiktok").innerHTML= i.toLocaleTimeString("en-US");
+            }*/
+            setInterval(Timer,1000);
+            function Timer(){
+                const T= new Date();
+                let hour= T.getHours();
+                let minute= T.getMinutes();
+                let second= T.getSeconds();
+                hour= h_m_s(hour);
+                minute= h_m_s(minute);
+                second= h_m_s(second);
+                ampm=am_pm(hour);
+                redorblue= mod2(second,"red","blue");
+                blackorwhite= mod2(second,"black","white");
+                whiteorblack= mod2(second,"white","black");
+                document.querySelector("#H").innerHTML= hour;
+                document.querySelector("#M").innerHTML= minute;
+                document.querySelector("#colorchange").style.color=redorblue;
+                document.querySelector("#colorchange").innerHTML=second;
+                document.querySelector("#AMPM").innerHTML=ampm;
+                document.querySelector("#tik").style.color=whiteorblack;
+                document.querySelector("#tok").style.color=blackorwhite;
+            }
+            function mod2(i,color1,color2){
+                if(i%2==0){
+                    return color1;
+                }
+                return color2;
+            }
+            function am_pm(i){
+                if(i<12){
+                    return "AM";
+                }
+                return "PM";
+            }
+            function h_m_s(i){
+                if(i<10){
+                    i="0"+i;
+                }
+                return i;
+            }
+        </script>
+    </body>
+</html>

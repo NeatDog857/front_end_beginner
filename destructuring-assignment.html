@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>解構賦值 Destructuring Assignment</title>
+    </head>
+    <body>
+        <script>
+            // 陣列的解構賦值 (將陣列中的資料分開賦值給變數, 按照"順序"做對應)
+                // 傳統解構賦值的作法
+                    /*
+                    let arr=[3,4,5,6];
+                    let d1=arr[0];
+                    let d2=arr[1];
+                    let d3=arr[2];
+                    let d4=arr[3];
+                    */
+                // 解構賦值的語法
+                    /*
+                    let arr=[3,4,5,6];
+                    let[d1,d2,d3,d4]=arr;
+                    */
+                    // 各種變形
+                        // 宣告與賦值分開
+                            /*
+                            let arr=[3,4,5,6];
+                            let d1,d2,d3,d4;
+                            [d1,d2,d3,d4]=arr;
+                            */
+                        // 預設值
+                            /*
+                            let arr=[3,4];
+                            let d1,d2,d3;
+                            [d1,d2=0,d3=5]=arr;
+                            */
+                // 變數資料交換
+                    /*
+                    let n1=3;
+                    let n2=4;
+                    [n2,n1]=[n1,n2];
+                    console.log(n1,n2);
+                    */
+
+            // 物件的解構賦值 (將物件中的資料分開賦值給變數, 按照"物件成員名稱"做對應)
+                // 傳統解構賦值的作法
+                    /*
+                    let obj=[x:3,y:4];
+                    let x = obj.x;
+                    let y = obj.y;
+                    */
+                // 解構賦值的語法
+                    /*
+                    let obj=[x:3,y:4];
+                    let {x,y}=obj; 
+                    */
+                    // 各種變形
+                        // 宣告與賦值分開
+                            /*
+                            let obj={x:3,y:4};
+                            let x,y;
+                            ({x,y}=obj); // 若不與宣告一起執行, 則要多加()
+                            */
+                        // 預設值
+                            /*
+                            let obj={x:3};
+                            let x,y;
+                            ({x,y=5}=obj);
+                            */
+                        // 指定新的變數名稱
+                            /*
+                            let obj={x:3,y:4};
+                            let newX,newY;
+                            ({x:newX,y:newY}=obj);
+                            */
+        </script>
+    </body>
+</html>

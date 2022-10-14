@@ -1,0 +1,113 @@
+<!DOCTYPE html> <!--告訴瀏覽器這個檔案類型是 html -->
+<html lang="en">
+    <head>
+        <!-- meta標籤 -->
+            <meta charset="UTF-8"/>
+            <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+            <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+                <!-- viewport=視口。viewport 的 content 則是告訴網站 寬度等於瀏覽裝置的寬度, 縮放比預設為100%-->
+            <meta name="description" content="Jake 的網站，裡面都是練習"/>
+                <!-- 對於網站的描述 -->
+            <meta name="author" content="Jake"/>
+            <meta name="keywords" content="Jake, html, practice"/>
+            <title>index html practice</title>
+    </head>
+    <body>
+        <!--基本標籤(Label)-->
+            <h1>This is label <i><b>h1</b></i><!--i是斜體 b是粗體--></h1> 
+            <p> This is label p</p>
+            <br/> <!--br是換行break 加上斜線只是為了良好的習慣 像是句子的句尾要有句點方便閱讀-->
+            upline is a label "br"
+            <hr/> <!--hr是水平線horizontal rule 加上斜線只是為了良好的習慣 像是句子的句尾要有句點方便閱讀-->
+            upline is a label "hr"
+            <br/>
+        <!-- 連結 & 圖片 -->
+            <a href="https://google.com">connect to google</a> <!--a是定義錨 href是a裡面的屬性 效果是超連結引用-->
+            <a href="page2.html">page2</a> <!--輸入同資料夾下的目標檔案名稱即可-->
+            <a href="nextlevel/page3.html">page3</a> <!--路徑的概念 先輸入目標資料夾後加/目標檔案即可-->
+            <a href="YU.jpg">YU</a> <!--連結圖片檔案也可以-->
+            <hr/>
+            <img src="https://apexitemstore.com/wp-content/uploads/2022/09/BROOD-MOTHER-300x300.webp"/>
+                <!--img定義影像 src原始檔連結-->
+            <img src="YU.jpg" width="400" height="400"/> <!--給予屬性width & height來調整圖片大小-->
+            <img src="YU.jpg" width="300"/> <!--如果只設定width or height其中之一 則會"等比例縮放"-->
+        <!-- 影片 & 嵌入youtube影片 -->
+            <video src="exvideo.mp4" controls width="1920" height="1080">failed to play</video> 
+                <!--video標籤中夾帶的文字內容是當影片無法順利執行的時候會顯示的文字內容 並且要給予controls屬性才能有播放的功能-->
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/twOK_J_AOYY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <!--第36行註解 : 直接貼上youtube分享中的嵌入影片程式碼即可-->
+        <!-- 列表 & 表格 -->
+            <ul> <!--ul是unordered list 是用點點來當開頭-->
+                <li>123</li> <!--li是list item 如果不用li則不會有開頭-->
+                123
+                <li>321</li>
+            </ul> 
+            <ol type="A"> <!--ol是ordered list 預設是用數字排序的方式來當開頭 也可以添加type屬性來改變不同的排序符號-->
+                <li>123</li>
+                <li>321</li>
+            </ol> 
+            <table width="300" height="200"> <!--創建一個表格 也可以添加width & height屬性來控制表格大小-->
+                <tr> <!--tr是table row 在此是第一個tr所以是第一行-->
+                    <td>date</td> <!--td是table data cell 在此是第一行中的第一格資料-->
+                    <td>math</td> <!--第一行第二格-->
+                    <td>english</td>
+                </tr>
+                <tr> <!--第二行-->
+                    <td>9/30</td>
+                    <td>90</td>
+                    <td>80</td>
+                </tr>
+            </table>
+        <!-- html 的容器 div & span --> <!--為了更加方便使用CSS-->
+            <!--div是division span是跨度--> 
+            <!--<div> is a block-level element and <span> is an inline element.-->
+                <div>123</div>
+                <div>321</div>
+                <hr/>
+                <span>123</span>
+                <span>321</span>
+            <div style="color: red;">  <!--style屬性將容器中內容全部染成紅色-->
+                <ul> 
+                    <li>123</li> 
+                    123
+                    <li>321</li>
+                </ul> 
+                <ol type="A"> 
+                    <li>123</li>
+                    <li>321</li>
+                </ol> 
+                <table> 
+                    <tr> 
+                        <td>date</td> 
+                        <td>math</td> 
+                        <td>english</td>
+                    </tr>
+                    <tr>
+                        <td>9/30</td>
+                        <td>90</td>
+                        <td>80</td>
+                    </tr>
+                </table>
+            </div>
+        <!-- html輸入標籤 -->
+            <input type="text" placeholder="Enter Account"/>
+            <br/>
+            <br/>
+            <input type="password" placeholder="Enter Password"/>
+            <br/>
+            <br/>
+            <input type="date"/>
+            <br/>
+            <br/>
+            <input type="range"/>
+            <br/>
+            <br/>
+            <input type="file"/>
+            <br/>
+            <br/>
+            <input type="checkbox"/>
+            <br/>
+            <br/>
+            <textarea>123</textarea>
+    </body>
+</html>

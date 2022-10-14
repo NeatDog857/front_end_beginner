@@ -1,0 +1,24 @@
+/* 先定義動畫 賦予動畫名稱  @keyframes 動畫名稱 */
+    @keyframes movingmoving{
+        /* from {background-color:white}
+        to {background-color: gold;} */
+
+        /* x%開頭 是根據animation-duration(持續時間)中的x%時間段作動畫分割 */
+        0% {background-color: red ; top: 10px; left: 10px;}      /*開始為紅色 位置在top 10px letf 10px*/
+        20% {background-color: orange; top: 20px; left: 20px;}  /*10秒的20%為第2秒時轉為橘色 依此類推*/
+        40% {background-color: yellow; top: 30px; left: 30px;}
+        60% {background-color: green; top: 40px; left: 40px;}
+        80% {background-color: blue; top: 50px; left: 50px;}
+        100% {background-color: purple; top: 60px; left: 60px;} 
+    }
+
+.box{
+    width:200px;
+    height:200px;
+    background-color:grey;
+    position:relative;
+    animation-name: movingmoving; /* 用 animation-name: 自定義動畫名稱 導入動畫屬性*/
+    animation-duration: 10s; /* animation-duration (持續時間) */
+    animation-iteration-count: 5; /* animation-iteration-count (重複播放次數) */
+    animation-delay: 1s; /* animation-delay (瀏覽器載入完畢後延遲x秒才開始播放動畫) */
+}
